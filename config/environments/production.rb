@@ -72,6 +72,6 @@ BussinessWebsite::Application.configure do
   :user_name            => 'ganvirpratik@gmail.com',
   :password             => 'thekingofthefuture',
   :authentication       => 'plain',
-  :enable_starttls_auto => true  }
+  :enable_starttls_auto => true
   }
 end
