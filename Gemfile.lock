@@ -193,6 +193,7 @@ DEPENDENCIES
   debugger
   execjs
   jquery-rails
+  kaminari
   paperclip
   pg
   rails (= 3.2.13)

@@ -10,7 +10,7 @@ function makeInquiry(){
      });
      if(valid){
        $.ajax({
-       	url: "customers",
+       	url: "/customers",
        	type: "post",
        	data: $("#contact_form").serialize()
        }).done(function() {

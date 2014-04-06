@@ -26,6 +26,7 @@ gem 'debugger'
 gem 'country_select'
 gem 'active_admin_editor'
 gem "paperclip"
+gem "kaminari"
 group :development do
   gem "execjs"
   gem "therubyracer"

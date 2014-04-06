@@ -1,0 +1,26 @@
+<div class="post">
+    <div class="row">
+       <% if blogpost.main_image.exists? %>
+        <div class="span3">
+            <a href='<%= "blogs/#{blogpost.id}" %>'>
+                <img class="main_pic" alt="main pic" src="<%= blogpost.main_image.url %>" />
+            </a>
+        </div>
+        <% end %>
+        <div class="span4 info" style="<%= 'width: 100%' unless blogpost.main_image.exists? %> ">
+            <a href='<%= "blogs/#{blogpost.id}" %>'>
+                <h3><%= blogpost.title %> </h3>
+            </a>
+            <p><%= blogpost.body.html_safe %></p>
+            <div class="post_info">
+                <div class="author">
+                    <%= blogpost.author %>
+                </div>
+                <div class="date">
+                    <%= blogpost.created_at.strftime("%b %d, %Y") %>
+                </div>
+            </div>
+        </div>
+    </div>
+    <%= link_to "More", "blogs/#{blogpost.id}", :class => "btn"%>
+</div>
