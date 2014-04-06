@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140406062707) do
+ActiveRecord::Schema.define(:version => 20140406204305) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "namespace"
@@ -70,6 +70,15 @@ ActiveRecord::Schema.define(:version => 20140406062707) do
     t.text     "comment"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+  end
+
+  create_table "page_views", :force => true do |t|
+    t.string   "referrer"
+    t.string   "session"
+    t.string   "ip_address"
+    t.string   "remote_agent"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
   end
 
 end

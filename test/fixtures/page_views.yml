@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  referrer: MyString
+  session: MyString
+  ip_address: MyString
+  remote_agent: MyString
+
+two:
+  referrer: MyString
+  session: MyString
+  ip_address: MyString
+  remote_agent: MyString
