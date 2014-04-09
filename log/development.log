@@ -42658,3 +42658,189 @@ ActionController::RoutingError (No route matches [GET] "/http:/code.jquery.com/j
 
 
   Rendered /home/fire/.rvm/gems/ruby-1.9.3-p545/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-10 01:58:33 +0530
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (2.4ms)
+  Rendered shared/_ga.html (0.3ms)
+  Rendered shared/_navbar.html.erb (0.2ms)
+  Rendered shared/_carousel.html.erb (0.3ms)
+  Rendered shared/_features.html.erb (0.3ms)
+  Rendered shared/_pricing.html.erb (0.2ms)
+  Rendered shared/_testimonials.html.erb (0.2ms)
+  Rendered shared/_copyright.html.erb (0.2ms)
+  Rendered shared/_footer.html.erb (3.0ms)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (52.3ms)[0m  INSERT INTO "page_views" ("created_at", "ip_address", "referrer", "remote_agent", "session", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["created_at", Wed, 09 Apr 2014 20:28:33 UTC +00:00], ["ip_address", "127.0.0.1"], ["referrer", nil], ["remote_agent", "Mozilla/5.0 (X11; Linux x86_64; rv:28.0) Gecko/20100101 Firefox/28.0"], ["session", "95a9c8ed990f6d82b01b0d9606ef538d"], ["updated_at", Wed, 09 Apr 2014 20:28:33 UTC +00:00]]
+  [1m[36m (42.0ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 353ms (Views: 242.3ms | ActiveRecord: 98.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-10 01:58:33 +0530
+Served asset /application.css - 304 Not Modified (66ms)
+
+
+Started GET "/assets/blogs.css?body=1" for 127.0.0.1 at 2014-04-10 01:58:33 +0530
+Served asset /blogs.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/customers.css?body=1" for 127.0.0.1 at 2014-04-10 01:58:33 +0530
+Served asset /customers.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2014-04-10 01:58:33 +0530
+Served asset /active_admin.css - 304 Not Modified (55ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-04-10 01:58:33 +0530
+Served asset /home.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/external_pages.css?body=1" for 127.0.0.1 at 2014-04-10 01:58:33 +0530
+Served asset /external_pages.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-04-10 01:58:33 +0530
+Served asset /scaffolds.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/active_admin/editor/wysiwyg.css?body=1" for 127.0.0.1 at 2014-04-10 01:58:33 +0530
+Served asset /active_admin/editor/wysiwyg.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-10 01:58:33 +0530
+Served asset /jquery.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-10 01:58:33 +0530
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at 2014-04-10 01:58:33 +0530
+Served asset /jquery-ui.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/active_admin/lib/namespace.js?body=1" for 127.0.0.1 at 2014-04-10 01:58:33 +0530
+Served asset /active_admin/lib/namespace.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/active_admin/components/jquery.aa.checkbox-toggler.js?body=1" for 127.0.0.1 at 2014-04-10 01:58:33 +0530
+Served asset /active_admin/components/jquery.aa.checkbox-toggler.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/active_admin/components/jquery.aa.dropdown-menu.js?body=1" for 127.0.0.1 at 2014-04-10 01:58:33 +0530
+Served asset /active_admin/components/jquery.aa.dropdown-menu.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/active_admin/components/jquery.aa.popover.js?body=1" for 127.0.0.1 at 2014-04-10 01:58:33 +0530
+Served asset /active_admin/components/jquery.aa.popover.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/active_admin/components/jquery.aa.table-checkbox-toggler.js?body=1" for 127.0.0.1 at 2014-04-10 01:58:33 +0530
+Served asset /active_admin/components/jquery.aa.table-checkbox-toggler.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/active_admin/pages/application.js?body=1" for 127.0.0.1 at 2014-04-10 01:58:33 +0530
+Served asset /active_admin/pages/application.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/active_admin/pages/batch_actions.js?body=1" for 127.0.0.1 at 2014-04-10 01:58:34 +0530
+Served asset /active_admin/pages/batch_actions.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/active_admin/application.js?body=1" for 127.0.0.1 at 2014-04-10 01:58:34 +0530
+Served asset /active_admin/application.js - 304 Not Modified (17ms)
+
+
+Started GET "/assets/active_admin/base.js?body=1" for 127.0.0.1 at 2014-04-10 01:58:34 +0530
+Served asset /active_admin/base.js - 304 Not Modified (58ms)
+
+
+Started GET "/assets/active_admin.js?body=1" for 127.0.0.1 at 2014-04-10 01:58:34 +0530
+Served asset /active_admin.js - 304 Not Modified (22ms)
+
+
+Started GET "/assets/blogs.js?body=1" for 127.0.0.1 at 2014-04-10 01:58:34 +0530
+Served asset /blogs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/customers.js?body=1" for 127.0.0.1 at 2014-04-10 01:58:34 +0530
+Served asset /customers.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/contact_form.js?body=1" for 127.0.0.1 at 2014-04-10 01:58:34 +0530
+Served asset /contact_form.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/external_pages.js?body=1" for 127.0.0.1 at 2014-04-10 01:58:34 +0530
+Served asset /external_pages.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-04-10 01:58:34 +0530
+Served asset /home.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-10 01:58:34 +0530
+Served asset /application.js - 304 Not Modified (27ms)
+
+
+Started GET "/http://code.jquery.com/jquery-latest.js" for 127.0.0.1 at 2014-04-10 01:58:34 +0530
+
+ActionController::RoutingError (No route matches [GET] "/http:/code.jquery.com/jquery-latest.js"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /home/fire/.rvm/rubies/ruby-1.9.3-p545/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/fire/.rvm/rubies/ruby-1.9.3-p545/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/fire/.rvm/rubies/ruby-1.9.3-p545/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/fire/.rvm/gems/ruby-1.9.3-p545/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/assets/contact_form.js?body=1" for 127.0.0.1 at 2014-04-10 01:58:34 +0530
+Served asset /contact_form.js - 304 Not Modified (0ms)
+
+
+Started GET "/http://code.jquery.com/jquery-latest.js" for 127.0.0.1 at 2014-04-10 01:58:34 +0530
+
+ActionController::RoutingError (No route matches [GET] "/http:/code.jquery.com/jquery-latest.js"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /home/fire/.rvm/rubies/ruby-1.9.3-p545/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/fire/.rvm/rubies/ruby-1.9.3-p545/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/fire/.rvm/rubies/ruby-1.9.3-p545/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/fire/.rvm/gems/ruby-1.9.3-p545/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
