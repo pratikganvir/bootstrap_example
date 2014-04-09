@@ -1,5 +1,6 @@
 BussinessWebsite::Application.routes.draw do
 
+  get "external_pages/jobs"
   get "external_pages/contact"
 
   root :to => "home#index"

@@ -1,6 +1,7 @@
 <!-- starts footer -->
-    <div id="footer">
+    <div id="footer" <%= footer_style %> >
         <div class="container">
+           <% if show_blog_and_contact? %>
             <div class="row">
                 <div class="span8">
                     <h3>From the Blog</h3>
@@ -80,6 +81,7 @@
                     </form>
                 </div>
             </div>
+            <% end %>
             <hr />
             <%= render "shared/copyright" %>
         </div>

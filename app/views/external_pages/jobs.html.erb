@@ -1,0 +1,22 @@
+<link rel="stylesheet" type="text/css" href="/css/theme.css" />
+<link rel="stylesheet" type="text/css" href="/css/blog.css" />
+<a href="#" class="scrolltop">
+<span>up</span>
+</a>
+<%= render "shared/navbar" %>
+<div id="blog_wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="span8">
+                <h1 class="header">
+                    Careers at Digits Experts
+                    <hr />
+                </h1>
+                <% @jobs.each do |job| %>
+                  <%= render "external_pages/job_info", :job => job %>
+                <% end %>
+            </div>
+        </div>
+    </div>
+</div>
+

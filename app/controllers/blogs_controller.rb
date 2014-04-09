@@ -8,5 +8,6 @@ class BlogsController < InheritedResources::Base
     end
 
     def show
+      @blogpost = Blog.find(params[:id])
     end
 end
