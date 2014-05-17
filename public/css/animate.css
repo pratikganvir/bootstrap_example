@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /*
 Animate.css - http://daneden.me/animate
-Licensed under the â˜º license (http://licence.visualidiot.com/)
+Licensed under the ☺ license (http://licence.visualidiot.com/)
 
 Copyright (c) 2012 Dan Eden
 
@@ -11,16 +11,28 @@ The above copyright notice and this permission notice shall be included in all c
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 */
-
+body { /* Addresses a small issue in webkit: http://bit.ly/NEdoDq */
+	-webkit-backface-visibility: hidden;
+}
 .animated {
-  -webkit-animation-duration: 1s;
-	   -moz-animation-duration: 1s;
-	     -o-animation-duration: 1s;
-	        animation-duration: 1s;
+
+	-webkit-animation-duration: .5s;
+	-webkit-animation-timing-function: ease;
 	-webkit-animation-fill-mode: both;
-	   -moz-animation-fill-mode: both;
-	     -o-animation-fill-mode: both;
-	        animation-fill-mode: both;
+	-moz-animation-duration: .5s;
+	-moz-animation-timing-function: ease;
+	-moz-animation-fill-mode: both;
+	-o-animation-duration: .5s;
+	-o-animation-timing-function: ease;
+	-o-animation-fill-mode: both;  
+	-ms-animation-duration: .5s;
+	-ms-animation-timing-function: ease;
+	-ms-animation-fill-mode: both;
+	animation-duration: .5s;
+	animation-timing-function: ease;
+	animation-fill-mode: both;  
+
+
 }
 
 .animated.hinge {
@@ -784,8 +796,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 	-moz-animation-name: fadeInDown;
 	-o-animation-name: fadeInDown;
 	animation-name: fadeInDown;
-	/*-webkit-animation-duration: 0.93s;
-	-webkit-animation-timing-function: ease-in-out;*/
 }
 @-webkit-keyframes fadeInLeft {
 	0% {
@@ -2774,8 +2784,8 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 	}
 	
 	100% {
-		-transform-origin: left bottom;
-		-transform: rotate(-90deg);
+		transform-origin: left bottom;
+		transform: rotate(-90deg);
 		opacity: 0;
 	}
 }
@@ -3261,3 +3271,4 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     -o-animation-duration: 0.75s;
     animation-duration: 0.75s;
 }
+

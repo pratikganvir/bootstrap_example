@@ -1,89 +1,33 @@
-<!-- starts footer -->
-    <div id="footer" <%= footer_style %> >
+<div class="footer">
         <div class="container">
-           <% if show_blog_and_contact? %>
             <div class="row">
-                <div class="span8">
-                    <h3>From the Blog</h3>
-                    <div class="blog_post">
-                        <div class="row">
-                            <div class="span2">
-                                <a href="/blog.html">
-                                    <img src="/img/pic_blog.png" alt="post image" class="img-circle" />
-                                </a>
-                            </div>
-                            <div class="span4">
-                                <a href="/blog.html" class="title">
-                                    Lorem Ipsum is simply dummy 
-                                </a>
-                                <div class="intro">
-                                    There are many variations of passages of Lorem alteration in some form by injected look even slightly believable.
-                                </div>
-                                <div class="date">
-                                    Oct 22. 2012
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="span4 contact_us">
-                    <h3>Contact Us</h3>
-                    <form class="form-horizontal" onsubmit="return makeInquiry();" action="#" id="contact_form"/>
-                        <div class="field">
-                            <div class="label_field">
-                                <label for="inputName">Name</label>
-                            </div>
-                            <input type="text" id="inputName" name="customer[name]"/>
-                        </div>
+                <div class="col-md-4 md-margin-bottom-40">
+                    <!-- About -->
+                    <div class="headline"><h2>About</h2></div>  
+                    <p class="margin-bottom-25 md-margin-bottom-40">Your needs are our priority and, whatever your concerns, you can be certain they will be addressed.We work with you through the entire engagement life cycle, from negotiation to customized solution design to delivery, maintaining open lines of communications at all times.</p>    
+                    <!-- End About -->
 
-                        <div class="field">
-                            <div class="label_field">
-                                <label for="inputEmail">Email</label>
-                            </div>
-                            <input type="text" id="inputEmail" name="customer[email]"/>
-                        </div>
+                    <!-- Monthly Newsletter -->
+                    <div class="headline"><h2>Monthly Newsletter</h2></div> 
+                    <p>Subscribe to our newsletter and stay up to date with the latest news and deals!</p>
+                    <form class="footer-subsribe">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Email Address" id="news_email" name="email">                            
+                            <span class="input-group-btn">
+                                <button class="btn-u" type="button" id="subscribe">Subscribe</button>
+                            </span>
+                        </div>                  
+                    </form>                         
+                    <!-- End Monthly Newsletter -->
+                </div><!--/col-md-4-->  
+                
+                <div class="col-md-4 md-margin-bottom-40">
+                    <!-- Recent Blogs -->
+                    <%= render "shared/blogs" %>
+                    <!-- End Recent Blogs -->                    
+                </div><!--/col-md-4-->
 
-                        <div class="field">
-                            <div class="label_field">
-                                <label for="inputPhone">Phone</label>
-                            </div>
-                            <input type="text" id="inputPhone" name="customer[phone]"/>
-                        </div>
-
-                        <div class="field">
-                            <div class="label_field">
-                                <label for="inputCity">City</label>
-                            </div>
-                            <input type="text" id="inputCity" name="customer[city]"/>
-                        </div>
-
-                        <div class="field">
-                            <div class="label_field">
-                                <label for="inputCity">State</label>
-                            </div>
-                            <input type="text" id="inputState" name="customer[state]"/>
-                        </div>
-
-                        <div class="field">
-                            <div class="label_field">
-                                <label for="inputCity">Country</label>
-                            </div>
-                            <input type="text" id="inputCoutry" name="customer[country]"/>
-                        </div>
-
-                        <div class="field">
-                            <div class="label_field">
-                                <label for="inputComment">Comments</label>
-                            </div>
-                            <textarea name="customer[comment]"></textarea>
-                        </div>
-                        <button type="submit" class="btn">Send</button>
-                    </form>
-                </div>
+                <%= render "shared/address" %>
             </div>
-            <% end %>
-            <hr />
-            <%= render "shared/copyright" %>
-        </div>
+        </div> 
     </div>
-<%= javascript_include_tag "contact_form.js" %>

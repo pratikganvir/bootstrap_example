@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140409163957) do
+ActiveRecord::Schema.define(:version => 20140517213636) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "namespace"
@@ -70,6 +70,7 @@ ActiveRecord::Schema.define(:version => 20140409163957) do
     t.text     "comment"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.string   "subject"
   end
 
   create_table "jobs", :force => true do |t|
@@ -79,6 +80,19 @@ ActiveRecord::Schema.define(:version => 20140409163957) do
     t.datetime "updated_at",  :null => false
   end
 
+  create_table "newsletter_subscribers", :force => true do |t|
+    t.string   "email"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "newsletters", :force => true do |t|
+    t.text     "send_to"
+    t.text     "body"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "page_views", :force => true do |t|
     t.string   "referrer"
     t.string   "session"
@@ -86,6 +100,29 @@ ActiveRecord::Schema.define(:version => 20140409163957) do
     t.string   "remote_agent"
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
+  end
+
+  create_table "project_images", :force => true do |t|
+    t.integer  "project_id"
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+  end
+
+  create_table "projects", :force => true do |t|
+    t.string   "title"
+    t.text     "description"
+    t.string   "image"
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+    t.string   "category"
   end
 
 end

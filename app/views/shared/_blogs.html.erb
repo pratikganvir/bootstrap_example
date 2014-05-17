@@ -1,0 +1,11 @@
+<div class="posts">
+    <div class="headline"><h2>Recent Blog Entries</h2></div>
+    <% recent_blogs.each do |blog| %>
+    <dl class="dl-horizontal">
+        <dt><a href="<%= 'blogs/'+blog.id.to_s %> "><img src="<%= blog.main_image.url %>" alt="" /></a></dt>
+        <dd>
+            <p><a href="<%= 'blogs/'+blog.id.to_s %> "><%= blog.title %></a></p> 
+        </dd>
+    </dl>
+    <% end %>
+</div>

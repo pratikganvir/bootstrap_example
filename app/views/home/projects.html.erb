@@ -1,0 +1,143 @@
+
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/favicon.ico">
+
+    <!-- CSS Global Compulsory -->
+    <link rel="stylesheet" href="/assets/plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+
+    <!-- CSS Implementing Plugins -->
+    <link rel="stylesheet" href="/assets/plugins/line-icons/line-icons.css">
+    <link rel="stylesheet" href="/assets/plugins/font-awesome/css/font-awesome.min.css">
+
+    <!-- CSS Page Style -->    
+    <link rel="stylesheet" href="/assets/css/pages/portfolio-v2.css">
+    
+    <!-- CSS Theme -->    
+    <link rel="stylesheet" href="/assets/css/themes/default.css" id="style_color">
+
+    <!-- CSS Customization -->
+    <link rel="stylesheet" href="/assets/css/custom.css">
+<div class="wrapper">
+    
+    <%= render "shared/header" %>
+    <!--=== Breadcrumbs ===-->
+    <div class="breadcrumbs">
+        <div class="container">
+            <h1 class="pull-left">Projects</h1>
+            <ul class="pull-right breadcrumb">
+                <li><a href="/index.html">Home</a></li>
+                <li class="active"><a href="/">Projects</a></li>
+            </ul>
+        </div><!--/container-->
+    </div><!--/breadcrumbs-->
+    <!--=== End Breadcrumbs ===-->
+
+    <!--=== Content Part ===-->
+    <div class="container content"> 	
+        <!-- Portfolio Sorting Blocks -->
+        <div class="sorting-block">
+            <ul class="sorting-nav sorting-nav-v1 text-center">
+                <li class="filter" data-filter="all">All</li>
+                <li class="filter" data-filter="net">.NET</li>
+                <li class="filter" data-filter="android">Android</li>
+                <li class="filter" data-filter="ios">IOS</li>
+                <li class="filter" data-filter="ror">Ruby On Rails</li>
+            </ul>
+
+            <ul class="row sorting-grid" id="project_list">
+                <% Project.all.each do |project| %>
+                <li class="col-md-3 col-sm-6 col-xs-12 mix net <%= project.category %>" data-cat="1">
+                    <a data-toggle="modal" class="rollit" href="#project_<%= project.id %>" next_index="1">
+                        <% project.project_images.each_with_index do |project_image, index| %>
+                          <img class="img-responsive" src="<%= project_image.image.url %>" alt="" height="255px" width="214px" style="display: <%= index.zero? ? 'block': 'none'%>">
+                        <% end %>
+                        <span class="sorting-cover">
+                            <span><%= project.title %></span>
+                        </span>
+                    </a>
+                </li>
+                <!-- Modal -->
+                  <div class="modal fade" id="project_<%= project.id %>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                          <h4 class="modal-title"><%= project.title %></h4>
+                        </div>
+                        <div class="modal-body">
+                          <img class="img-responsive" src="<%= project.image.url %>" alt="">
+                          <%= project.description.html_safe %>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                      </div><!-- /.modal-content -->
+                    </div><!-- /.modal-dialog -->
+                  </div><!-- /.modal -->
+                <% end %>
+            </ul>
+        
+            <div class="clearfix"></div>
+        </div>
+        <!-- End Portfolio Sorting Blocks -->
+    </div><!--/container-->	 	
+    <!--=== End Content Part ===-->
+
+    <!--=== Contact Us ===-->
+    <!--=== Footer ===-->
+    <%= render "shared/footer" %>
+    <!--/footer-->
+    <!--=== End Footer ===-->
+
+    <!--=== Copyright ===-->
+    <%= render "shared/copyright" %>
+    <!--/copyright--> 
+    <!--=== End Copyright ===-->
+</div><!--/wrapper-->
+
+<!-- JS Global Compulsory -->           
+<script type="text/javascript" src="/assets/plugins/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="/assets/plugins/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="/assets/plugins/bootstrap/js/bootstrap.min.js"></script> 
+<!-- JS Implementing Plugins -->           
+<script type="text/javascript" src="/assets/plugins/back-to-top.js"></script>
+<script type="text/javascript" src="/assets/plugins/jquery.mixitup.min.js"></script>    
+<!-- JS Page Level -->           
+<script type="text/javascript" src="/assets/js/app.js"></script>
+<script type="text/javascript" src="/assets/js/pages/page_portfolio.js"></script>
+<script type="text/javascript">
+    jQuery(document).ready(function() {
+        App.init();
+        PortfolioPage.init();  
+        setInterval(function(){
+        $(".rollit").each(function(index){
+              next_or_zero = 0
+              roll = $(this);
+              next = parseInt(roll.attr("next_index"));
+              images = $(this).find("img");
+              ((next) < images.length) ? (next_or_zero = next+1) : (next_or_zero = 0)
+              if(next_or_zero==0){
+                $(images[next-1]).hide();
+                $(images[0]).show();
+              }else if(next==0){
+                $(images[0]).hide();
+                $(images[1]).show();
+              }else{
+                $(images[next-1]).hide();
+                $(images[next]).show();
+              }
+              roll.attr("next_index",(next_or_zero));
+          });     
+        }, 3000);
+    });
+</script>
+<!--[if lt IE 9]>
+    <script src="/assets/plugins/respond.js"></script>
+<![endif]-->

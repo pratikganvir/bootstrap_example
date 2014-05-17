@@ -1,70 +1,151 @@
-<link rel="stylesheet" type="text/css" href="/css/theme.css" />
-<link rel="stylesheet" type="text/css" href="/css/blog.css" />
-<a href="/#" class="scrolltop">
-    <span>up</span>
-</a>
-<div class="navbar navbar-fixed-top">
-  <div class="navbar-inner">
-    <div class="container">
-        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-        </a>
-        <a class="brand" href="/index.html">
-            <img src="/img/logo.png" />
-        </a>
-        <div class="nav-collapse collapse">
-            <ul class="nav pull-right">
-                <li><a href="/features.html">Features</a></li>
-                <li><a href="/pricing.html">Pricing</a></li>
-                <li><a href="/contact.html">Contact us</a></li>
-                <li><a href="/blog.html">Blog</a></li>
-                <li class="dropdown">
-                    <a href="/#" class="dropdown-toggle" data-toggle="dropdown">
-                        External Pages
-                        <b class="caret"></b>
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a href="/features.html">Features</a></li>
-                        <li><a href="/pricing.html">Pricing</a></li>
-                        <li><a href="/portfolio.html">Portfolio</a></li>
-                        <li><a href="/coming-soon.html">Coming Soon</a></li>
-                        <li><a href="/aboutus.html">About us</a></li>
-                        <li><a href="/contact.html">Contact us</a></li>
-                        <li><a href="/faq.html">FAQ</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a class="btn-header" href="/signup.html">Sign up</a>
-                </li>
-                <li><a class="btn-header" href="/signin.html">Sign in</a></li>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <!-- CSS Global Compulsory -->
+    <link rel="stylesheet" href="/assets/plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+
+    <!-- CSS Implementing Plugins -->
+    <link rel="stylesheet" href="/assets/plugins/line-icons/line-icons.css">
+    <link rel="stylesheet" href="/assets/plugins/font-awesome/css/font-awesome.min.css">
+
+    <!-- CSS Page Style -->    
+    <link rel="stylesheet" href="/assets/css/pages/blog.css">
+
+    <!-- CSS Theme -->    
+    <link rel="stylesheet" href="/assets/css/themes/default.css" id="style_color">
+
+    <!-- CSS Customization -->
+    <link rel="stylesheet" href="/assets/css/custom.css">
+
+<div class="wrapper">
+    <%= render "shared/header" %>
+    <!--=== Breadcrumbs ===-->
+    <div class="breadcrumbs">
+        <div class="container">
+            <h1 class="pull-left">Blogs</h1>
+            <ul class="pull-right breadcrumb">
+                <li><a href="/home/index">Home</a></li>
+                <li class="active">Blogs</li>
             </ul>
         </div>
-    </div>
-  </div>
-</div>
+    </div><!--/breadcrumbs-->
+    <!--=== End Breadcrumbs ===-->
 
-<div id="blog_wrapper" class="blog_post">
-    <div class="container">
-        <div class="row">
-
-            <div class="span8">
-
-                <h1 class="header">
-                    <%= @blogpost.title %>
-                </h1>
-
-                <img class="post_pic" src="/img/blog_post.jpg" />
-
-                <div class="post_content">
-                    <%= @blogpost.body.html_safe %>
-
-                    <div class="author"><% @blogpost.author %></div>
-                    <div class="date"><%= @blogpost.created_at.strftime("%b %d, %Y") %></div>
-                </div>
+    <!--=== Content Part ===-->
+    <div class="container content">     
+        <div class="row blog-page">    
+            <!-- Left Sidebar -->
+            <div class="col-md-9">
+              <%= render :partial => "blogs/blogpost_content", :locals => { :blogpost => @blog_post} %>
             </div>
-            <%= render "shared/sidebar" %>
-        </div>
-    </div>
-</div>
+            <!-- End Left Sidebar -->
+
+            <!-- Right Sidebar -->
+            <div class="col-md-3 magazine-page">
+                <!-- Search Bar -->
+                <div class="headline headline-md"><h2>Search</h2></div>            
+                <div class="input-group margin-bottom-40">
+                    <input type="text" class="form-control" placeholder="Search">
+                    <span class="input-group-btn">
+                        <button class="btn-u" type="button">Go</button>
+                    </span>
+                </div>
+                <!-- End Search Bar -->
+
+                <!-- Posts -->
+                <div class="posts margin-bottom-40">
+                    <div class="headline headline-md"><h2>Recent Posts</h2></div>
+                    <% recent_blogs.each do |post| %>
+                      <%= render :partial => "recent_posts", :locals => {:post => post} %>
+                    <% end %>
+                </div><!--/posts-->
+                <!-- End Posts -->
+
+                 <!-- Tabs Widget -->
+                <div class="headline headline-md"><h2>Tabs Widget</h2></div>
+                <div class="tab-v2 margin-bottom-40">
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a data-toggle="tab" href="#home-1">About Us</a></li>
+                        <li><a data-toggle="tab" href="#home-2">Quick Links</a></li>
+                    </ul>                
+                    <div class="tab-content">
+                        <div id="home-1" class="tab-pane active">
+                            <p>True certainty of success comes from working with a partner you trust to provide the insight, support and expertise that will propel your business forward.</p> <p>We understand your needs, goals, and concerns, and enable you to realize your full potential.</p>                        
+                        </div>
+                        <div id="home-2" class="tab-pane magazine-sb-categories">
+                            <div class="row">
+                                <ul class="list-unstyled col-xs-6">
+                                    <li><a href="#">Home</a></li>
+                                    <li><a href="#">Projects</a></li>
+                                    <li><a href="#">Careers</a></li>
+                                    <li><a href="#">About us</a></li>
+                                </ul>                        
+                                <ul class="list-unstyled col-xs-6">
+                                    <li><a href="#">Our home page</a></li>
+                                    <li><a href="#">Projects we have done</a></li>
+                                    <li><a href="#">Career opportunities</a></li>
+                                    <li><a href="#">About us</a></li>
+                                </ul>                        
+                            </div>
+                        </div>
+                    </div>
+                </div>            
+                <!-- End Tabs Widget -->
+
+                <!-- Photo Stream -->
+                <div class="headline headline-md"><h2>Photo Stream</h2></div>
+                <ul class="list-unstyled blog-photos margin-bottom-30">
+                    <% eight_blopost_images.each do |blog| %>
+                      <li><a href="#"><img class="hover-effect" alt="" src="<%= blog.main_image.url %>"></a></li>
+                    <% end %>
+                </ul>
+                <!-- End Photo Stream -->
+
+                <!-- Blog Posts -->
+                <div class="row">
+                    <% two_bloposts.each do |blog| %>
+                    <div class="magazine-posts col-md-12 col-sm-6">
+                        <h3><a href="#"><%= blog.title %></a></h3>
+                        <span><%= blog.created_at.strftime("%M %d, %Y") %></span>
+                        <div class="magazine-posts-img">
+                            <a href="#"><img alt="" src="<%= blog.main_image.url %>" class="img-responsive"></a>
+                            <span class="magazine-badge magazine-badge-red">Unify</span>                                    
+                        </div>
+                    </div>
+                    <% end %>               
+                </div>            
+                <!-- End Blog Posts -->
+            </div>
+            <!-- End Right Sidebar -->
+        </div><!--/row-->        
+    </div><!--/container-->     
+    <!--=== End Content Part ===-->
+    <!--=== Contact Us ===-->
+    <!--=== Footer ===-->
+    <%= render "shared/footer" %>
+    <!--/footer-->
+    <!--=== End Footer ===-->
+
+    <!--=== Copyright ===-->
+    <%= render "shared/copyright" %>
+    <!--/copyright--> 
+    <!--=== End Copyright ===-->
+</div><!--/wrapper-->
+
+<!-- JS Global Compulsory -->           
+<script type="text/javascript" src="/assets/plugins/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="/assets/plugins/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="/assets/plugins/bootstrap/js/bootstrap.min.js"></script> 
+<!-- JS Implementing Plugins -->           
+<script type="text/javascript" src="/assets/plugins/back-to-top.js"></script>
+<!-- JS Page Level -->           
+<script type="text/javascript" src="/assets/js/app.js"></script>
+<script type="text/javascript">
+    jQuery(document).ready(function() {
+        App.init();
+    });
+</script>
+<!--[if lt IE 9]>
+    <script src="/assets/plugins/respond.js"></script>
+<![endif]-->

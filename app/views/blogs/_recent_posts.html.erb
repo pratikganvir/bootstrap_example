@@ -1,0 +1,8 @@
+<dl class="dl-horizontal">
+    <% if post.main_image.exists? %>
+      <dt><a href="<%= 'blogs/'+post.id.to_s %>"><img src="<%= post.main_image.url %>" alt="" /></a></dt>
+    <% end %>
+    <dd>
+        <p><a href="<%= 'blogs/'+post.id.to_s %>"><%= post.title %></a></p> 
+    </dd>
+</dl>

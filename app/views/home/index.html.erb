@@ -1,2 +1,306 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/favicon.ico">
+
+    <!-- CSS Global Compulsory -->
+    <link rel="stylesheet" href="/assets/plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+
+    <!-- CSS Implementing Plugins -->
+    <link rel="stylesheet" href="/assets/plugins/line-icons/line-icons.css">
+    <link rel="stylesheet" href="/assets/plugins/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/assets/plugins/flexslider/flexslider.css">     
+    <link rel="stylesheet" href="/assets/plugins/parallax-slider/css/parallax-slider.css">
+
+    <!-- CSS Theme -->    
+    <link rel="stylesheet" href="/assets/css/themes/default.css" id="style_color">
+
+    <!-- CSS Customization -->
+    <link rel="stylesheet" href="/assets/css/custom.css">   
+
+<div class="wrapper">
+    <%= render "shared/header" %>
+    <!--=== Slider ===-->
+    <div class="slider-inner">
+        <div id="da-slider" class="da-slider">
+            <div class="da-slide">
+                <h2><i>Ruby On Rails</i> <br /> <i>Android</i> <br /> <i>IOS</i></h2>
+                <p><i>Experts in technologies</i> <br /></p>
+                <div class="da-img"><img src="/assets/img/Mobile-App-Development-resources.jpg" alt="" style="width: 593px;"/></div>
+            </div>
+            <div class="da-slide">
+                <h2><i>Complex projects</i> <br /> <i>And happy clients</i> <br /> <i> And MANY MORE</i></h2>
+                <div class="da-img"><img src="/assets/img/happyclients.jpg" alt="" style="width: 417px;height: 220px;margin-top: -67px;"/></div>
+            </div>
+            <div class="da-slide">
+                <h2><i>USING BEST WEB</i> <br /> <i>SOLUTIONS WITH</i> <br /> <i>HTML5/CSS3</i></h2>
+                <p><i>Awsome designs</i> <br /> <i>scalabel architecture</i> <br /> <i>happy users </i></p>
+                <div class="da-img"><img src="/assets/plugins/parallax-slider/img/html5andcss3.png" alt="image01" /></div>
+            </div>
+            <div class="da-arrows">
+                <span class="da-arrows-prev"></span>
+                <span class="da-arrows-next"></span>        
+            </div>
+        </div>
+    </div><!--/slider-->
+    <!--=== End Slider ===-->
+
+    <!--=== Purchase Block ===-->
+    <div class="purchase">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9 animated fadeInLeft">
+                    <span>Get Simple solution to complex problems</span>
+                    <p>Here we at Digits Experts we analyze your problems in depth and provide a simple solution to you.</p>
+                </div>            
+                <div class="col-md-3 btn-buy animated fadeInRight">
+                    <a href="//contact_us" class="btn-u btn-u-lg"><i class="fa fa-bell"></i> Contact Now</a>
+                </div>
+            </div>
+        </div>
+    </div><!--/row-->
+    <!-- End Purchase Block -->
+
+    <!--=== Content Part ===-->
+    <div class="container content"> 
+        <!-- Service Blocks -->
+        <div class="row margin-bottom-30">
+            <div class="col-md-4">
+                <div class="service">
+                    <i class="fa fa-compress service-icon"></i>
+                    <div class="desc">
+                        <h4>Define</h4>
+                        <p>We take your raw requirments, polish it and use it to construct the base of strong web based or mobile application.</p>
+                    </div>
+                </div>  
+            </div>
+            <div class="col-md-4">
+                <div class="service">
+                    <i class="fa fa-cogs service-icon"></i>
+                    <div class="desc">
+                        <h4>Build</h4>
+                        <p>Each requirment is built using the dynamic technolgy such as Ruby on Rails, .NET framework, Android and IOS.</p>
+                    </div>
+                </div>  
+            </div>
+            <div class="col-md-4">
+                <div class="service">
+                    <i class="fa fa-rocket service-icon"></i>
+                    <div class="desc">
+                        <h4>Test</h4>
+                        <p>Functioality is tested for functional validation an requirement validation. Applications passing all validations are released to client.
+                        </p>
+                    </div>
+                </div>  
+            </div>              
+        </div>
+        <!-- End Service Blokcs -->
+
+        <!-- Recent Works -->
+        <%= render "home/projects" %>
+        <!-- End Recent Works -->
+
+        <!-- Info Blokcs -->
+        <div class="row margin-bottom-30">
+            <!-- Welcome Block -->
+            <div class="col-md-8 md-margin-bottom-40">
+                <div class="headline"><h2>Welcome To Digits Experts</h2></div>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <img class="img-responsive margin-bottom-20" src="/assets/img/main/6.jpg" alt="" />
+                    </div>
+                    <div class="col-sm-8">
+                        <p>Headquartered at Nagpur, India, Digits Experts combines a passion for client satisfaction, technology innovation, industry and business process expertise, and a robust, collaborative workforce that embodies the future of work.</p>
+                        <ul class="list-unstyled margin-bottom-20">
+                            <li><i class="fa fa-check color-green"></i> We provide efficient solutions</li>
+                            <li><i class="fa fa-check color-green"></i> We provide cost effective solutions</li>
+                            <li><i class="fa fa-check color-green"></i> We love what we do, we do what we love</li>
+                            <li><i class="fa fa-check color-green"></i> Helping people and enterprises reach their true potential</li>
+                        </ul>                    
+                    </div>
+                </div>
+
+                <blockquote class="hero-unify">
+                    <p>True certainty of success comes from working with a partner you trust to provide the insight,support and expertise that will propel your business forward. When you work with us, your long-term success is our motivation.</p>
+                </blockquote>
+            </div><!--/col-md-8-->        
+
+            <!-- Latest Shots -->
+            <div class="col-md-4">
+                <div class="headline"><h2>Latest Shots</h2></div>
+                <div id="myCarousel" class="carousel slide carousel-v1">
+                    <div class="carousel-inner">
+                        <% recent_works.each_with_index do |work,index| %>
+                        <div class="item <%= index ==0 ? 'active': '' %>">
+                            <img src="<%= work.image.url %>" alt="">
+                            <div class="carousel-caption">
+                                <p><%= work.title %></p>
+                            </div>
+                        </div>
+                        <% end %>
+                    </div>
+                    
+                    <div class="carousel-arrow">
+                        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                            <i class="fa fa-angle-left"></i>
+                        </a>
+                        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div><!--/col-md-4-->
+        </div>  
+        <!-- End Info Blokcs -->
+
+        <!-- Our Clients -->
+        <!--
+        <div id="clients-flexslider" class="flexslider home clients">
+            <div class="headline"><h2>Our Clients</h2></div>    
+            <ul class="slides">
+                <li>
+                    <a href="/#">
+                        <img src="/assets/img/clients/hp_grey.png" alt="" /> 
+                        <img src="/assets/img/clients/hp.png" class="color-img" alt="" />
+                    </a>
+                </li>
+                <li>
+                    <a href="/#">
+                        <img src="/assets/img/clients/igneus_grey.png" alt="" /> 
+                        <img src="/assets/img/clients/igneus.png" class="color-img" alt="" />
+                    </a>
+                </li>
+                <li>
+                    <a href="/#">
+                        <img src="/assets/img/clients/vadafone_grey.png" alt="" /> 
+                        <img src="/assets/img/clients/vadafone.png" class="color-img" alt="" />
+                    </a>
+                </li>
+                <li>
+                    <a href="/#">
+                        <img src="/assets/img/clients/walmart_grey.png" alt="" /> 
+                        <img src="/assets/img/clients/walmart.png" class="color-img" alt="" />
+                    </a>
+                </li>
+                <li>
+                    <a href="/#">
+                        <img src="/assets/img/clients/shell_grey.png" alt="" /> 
+                        <img src="/assets/img/clients/shell.png" class="color-img" alt="" />
+                    </a>
+                </li>
+                <li>
+                    <a href="/#">
+                        <img src="/assets/img/clients/natural_grey.png" alt="" /> 
+                        <img src="/assets/img/clients/natural.png" class="color-img" alt="" />
+                    </a>
+                </li>
+                <li>
+                    <a href="/#">
+                        <img src="/assets/img/clients/aztec_grey.png" alt="" /> 
+                        <img src="/assets/img/clients/aztec.png" class="color-img" alt="" />
+                    </a>
+                </li>
+                <li>
+                    <a href="/#">
+                        <img src="/assets/img/clients/gamescast_grey.png" alt="" /> 
+                        <img src="/assets/img/clients/gamescast.png" class="color-img" alt="" />
+                    </a>
+                </li>
+                <li>
+                    <a href="/#">
+                        <img src="/assets/img/clients/cisco_grey.png" alt="" /> 
+                        <img src="/assets/img/clients/cisco.png" class="color-img" alt="" />
+                    </a>
+                </li>
+                <li>
+                    <a href="/#">
+                        <img src="/assets/img/clients/everyday_grey.png" alt="" /> 
+                        <img src="/assets/img/clients/everyday.png" class="color-img" alt="" />
+                    </a>
+                </li>
+                <li>
+                    <a href="/#">
+                        <img src="/assets/img/clients/cocacola_grey.png" alt="" /> 
+                        <img src="/assets/img/clients/cocacola.png" class="color-img" alt="" />
+                    </a>
+                </li>
+                <li>
+                    <a href="/#">
+                        <img src="/assets/img/clients/spinworkx_grey.png" alt="" /> 
+                        <img src="/assets/img/clients/spinworkx.png" class="color-img" alt="" />
+                    </a>
+                </li>
+                <li>
+                    <a href="/#">
+                        <img src="/assets/img/clients/shell_grey.png" alt="" /> 
+                        <img src="/assets/img/clients/shell.png" class="color-img" alt="" />
+                    </a>
+                </li>
+                <li>
+                    <a href="/#">
+                        <img src="/assets/img/clients/natural_grey.png" alt="" /> 
+                        <img src="/assets/img/clients/natural.png" class="color-img" alt="" />
+                    </a>
+                </li>
+                <li>
+                    <a href="/#">
+                        <img src="/assets/img/clients/gamescast_grey.png" alt="" /> 
+                        <img src="/assets/img/clients/gamescast.png" class="color-img" alt="" />
+                    </a>
+                </li>
+                <li>
+                    <a href="/#">
+                        <img src="/assets/img/clients/everyday_grey.png" alt="" /> 
+                        <img src="/assets/img/clients/everyday.png" class="color-img" alt="" />
+                    </a>
+                </li>
+                <li>
+                    <a href="/#">
+                        <img src="/assets/img/clients/spinworkx_grey.png" alt="" /> 
+                        <img src="/assets/img/clients/spinworkx.png" class="color-img" alt="" />
+                    </a>
+                </li>
+            </ul>
+        </div>--><!--/flexslider-->
+        <!-- End Our Clients -->
+    </div><!--/container-->     
+    <!-- End Content Part -->
+
+    <!--=== Footer ===-->
+    <%= render "shared/footer" %>
+    <!--/footer-->
+    <!--=== End Footer ===-->
+
+    <!--=== Copyright ===-->
+    <%= render "shared/copyright" %>
+    <!--/copyright--> 
+    <!--=== End Copyright ===-->
+</div><!--/wrapper-->
+
+<!-- JS Global Compulsory -->           
+<script type="text/javascript" src="/assets/plugins/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="/assets/plugins/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+<!-- JS Implementing Plugins -->
+<script type="text/javascript" src="/assets/plugins/back-to-top.js"></script>
+<script type="text/javascript" src="/assets/plugins/flexslider/jquery.flexslider-min.js"></script>
+<script type="text/javascript" src="/assets/plugins/parallax-slider/js/modernizr.js"></script>
+<script type="text/javascript" src="/assets/plugins/parallax-slider/js/jquery.cslider.js"></script>
+<!-- JS Page Level -->           
+<script type="text/javascript" src="/assets/js/app.js"></script>
+<script type="text/javascript" src="/assets/js/pages/index.js"></script>
+<script type="text/javascript">
+    jQuery(document).ready(function() {
+        App.init();
+        App.initSliders();
+        Index.initParallaxSlider();        
+    });
+</script>
+<!--[if lt IE 9]>
+    <script src="/assets/plugins/respond.js"></script>
+<![endif]-->

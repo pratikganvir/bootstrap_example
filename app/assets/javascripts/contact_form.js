@@ -1,6 +1,6 @@
 function makeInquiry(){
 	var valid=true;
-    $.each(["Name","Email","Phone","City","State","Country","Comment"],function(index,value){
+    $.each(["Name","Email","Comment"],function(index,value){
        ele = $("#input"+value);
        if(ele.val()==""){
        	 alert("Please enter "+value);
@@ -15,7 +15,14 @@ function makeInquiry(){
        	data: $("#contact_form").serialize()
        }).done(function() {
          alert( "Thank you for contatacting us. We will get back you soon..." );
+         emptyFields();
        });
      }
      return false;
+}
+
+function emptyFields(){
+  $.each(["Name","Email","Comment"],function(index,value){
+       $("#input"+value).val("");
+     });
 }

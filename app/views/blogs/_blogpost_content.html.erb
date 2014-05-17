@@ -1,0 +1,9 @@
+<div class="blog margin-bottom-40">
+    <h2><a href="<%= 'blogs/'+blogpost.id.to_s %>"><%= blogpost.title %></a></h2>
+    <% if blogpost.main_image.exists? %>
+      <div class="blog-img">
+        <img src="<%= blogpost.main_image.url %>" alt="" class="img-responsive" />
+      </div>
+    <% end %>
+    <p><%= blogpost.body.html_safe %></p>
+</div>

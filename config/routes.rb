@@ -1,5 +1,8 @@
 BussinessWebsite::Application.routes.draw do
 
+  resources :projects
+
+
   get "external_pages/jobs"
   get "external_pages/contact"
 
@@ -7,16 +10,22 @@ BussinessWebsite::Application.routes.draw do
   
   get "home/index"
 
-  get "home/features"
+  get "home/careers"
 
-  get "home/pricing"
+  get "home/projects"
 
   get "home/contact_us"
 
   get "home/blog"
 
+  get "home/about_us"
+  post "home/subscribe_newsletter"
   match "/blog", to: "blogs#index"
-
+  match "/contact_us", to: "home#contact_us"
+  get "home/privacy"
+  get "home/tos"
+  get "home/how_we_hire"
+  get "home/culture"
   resources :customers
 
 
