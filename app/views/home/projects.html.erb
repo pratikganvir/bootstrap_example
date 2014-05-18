@@ -72,7 +72,7 @@
                           <h4 class="modal-title"><%= project.title %></h4>
                         </div>
                         <div class="modal-body">
-                          <% project.project_images.present? %>
+                          <% if project.project_images.present? %>
                             <img class="img-responsive" src="<%= project.project_images.first.image.url %>" alt="">
                           <% end %>
                           <%= project.description.html_safe %>
