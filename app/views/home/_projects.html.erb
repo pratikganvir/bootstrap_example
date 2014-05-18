@@ -5,7 +5,9 @@
                 <div class="thumbnails thumbnail-style thumbnail-kenburn">
                     <div class="thumbnail-img">
                         <div class="overflow-hidden">
-                            <%= image_tag work.image.url, :class => "img-responsive", :alt => work.title %>
+                          <% if work.project_images.present? %>
+                            <%= image_tag work.project_images.first.image.url, :class => "img-responsive", :alt => work.title %>
+                           <% end %>
                         </div>
                         <%= link_to "read more +", "#work_#{work.id}", "data-toggle"=>"modal", :class => "btn-more hover-effect" %>
                     </div>
@@ -24,7 +26,9 @@
                           <h4 class="modal-title"><%= work.title %></h4>
                         </div>
                         <div class="modal-body">
-                          <img class="img-responsive" src="<%= work.image.url %>" alt="" >
+                          <% if work.project_images.present? %>
+                            <img class="img-responsive" src="<%= work.project_images.first.image.url %>" alt="" >
+                          <% end %>
                           <%= work.description.html_safe %>
                         </div>
                         <div class="modal-footer">
