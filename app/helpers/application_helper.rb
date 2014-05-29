@@ -32,4 +32,8 @@ module ApplicationHelper
     def two_bloposts
       Blog.order("created_at DESC").limit(2)
     end
+
+    def testimonials
+      Testimonial.all
+    end
 end

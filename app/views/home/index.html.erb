@@ -5,7 +5,7 @@
     <meta name="author" content="">
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="shortcut icon" href="/assets/img/logo_icon.ico">
 
     <!-- CSS Global Compulsory -->
     <link rel="stylesheet" href="/assets/plugins/bootstrap/css/bootstrap.min.css">
@@ -31,11 +31,11 @@
             <div class="da-slide">
                 <h2><i>Ruby On Rails</i><br /> <i>.NET</i> <br /> <i>Android</i> <br /> <i>IOS</i></h2>
                 <p style="margin-top:30px;"><i>Experts in technologies</i> <br /></p>
-                <div class="da-img"><img src="/assets/img/Mobile-App-Development-resources.jpg" alt="" style="width: 593px;"/></div>
+                <div class="da-img"><img src="/assets/img/Mobile-App-Development-resources.png" alt="" style="width: 593px;"/></div>
             </div>
             <div class="da-slide">
                 <h2><i>Complex projects</i> <br /> <i>And happy clients</i> <br /> <i> And MANY MORE</i></h2>
-                <div class="da-img"><img src="/assets/img/happyclients.jpg" alt="" style="width: 417px;height: 220px;margin-top: -67px;"/></div>
+                <div class="da-img"><img src="/assets/img/happyclients2.jpg" alt="" style="width: 417px;height: 220px;margin-top: -67px;"/></div>
             </div>
             <div class="da-slide">
                 <h2><i>USING BEST WEB</i> <br /> <i>SOLUTIONS WITH</i> <br /> <i>HTML5/CSS3</i></h2>
@@ -157,6 +157,37 @@
             </div><!--/col-md-4-->
         </div>  
         <!-- End Info Blokcs -->
+        <!-- Our Testomonial -->
+        <div class="row margin-bottom-40">
+
+            <div class="col-md-12">
+                <div class="carousel slide testimonials testimonials-v1" id="testimonials-1">
+                    <div class="carousel-inner">
+                        <% testimonials.each_with_index do |testimonial,index| %>
+                        <div class="item <%= 'active' if index.zero? %>">
+                            <p><%= testimonial.message %></p>
+                            <div class="testimonial-info">
+                                <span class="testimonial-author">
+                                    <%= testimonial.client_name %>
+                                    <em><%= testimonial.designation %></em>
+                                </span>
+                            </div>
+                        </div>
+                        <% end %>
+                    </div>
+                    
+                    <div class="carousel-arrow">
+                        <a data-slide="prev" href="#testimonials-1" class="left carousel-control">
+                            <i class="fa fa-angle-left"></i>
+                        </a>
+                        <a data-slide="next" href="#testimonials-1" class="right carousel-control">
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+                    </div>
+                </div>            
+            </div>
+        </div>
+        <!-- End Testomonial -->
 
     </div><!--/container-->     
     <!-- End Content Part -->
