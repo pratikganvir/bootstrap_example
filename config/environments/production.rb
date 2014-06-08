@@ -69,8 +69,8 @@ BussinessWebsite::Application.configure do
   :address              => "smtp.gmail.com",
   :port                 => 587,
   :domain               => 'thawing-thicket-8036.herokuapp.com',
-  :user_name            => 'ganvirpratik@gmail.com',
-  :password             => 'thekingofthefuture',
+  :user_name            => '**********************************',
+  :password             => '***********************',
   :authentication       => 'plain',
   :enable_starttls_auto => true
   }
