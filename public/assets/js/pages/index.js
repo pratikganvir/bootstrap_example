@@ -5,7 +5,9 @@ var Index = function () {
         //Parallax Slider
         initParallaxSlider: function () {
 			$(function() {
-				$('#da-slider').cslider();
+				$('#da-slider').cslider({
+					autoplay    : true
+				});
 			});
         },
 
