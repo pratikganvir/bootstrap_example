@@ -5,7 +5,8 @@
     <meta name="author" content="">
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="/assets/img/logo_icon.ico">
+    
+
 
     <!-- CSS Global Compulsory -->
     <link rel="stylesheet" href="/assets/plugins/bootstrap/css/bootstrap.min.css">
@@ -137,7 +138,7 @@
                     <div class="carousel-inner">
                         <% recent_works.each_with_index do |work,index| %>
                         <div class="item <%= index ==0 ? 'active': '' %>">
-                            <img src="<%= work.image.url %>" alt="">
+                            <img src="<%= work.project_images.first.image.url if work.project_images.first %>" alt="">
                             <div class="carousel-caption">
                                 <p><%= work.title %></p>
                             </div>
