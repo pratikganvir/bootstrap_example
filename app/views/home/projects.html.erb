@@ -57,7 +57,7 @@
                 <li class="col-md-3 col-sm-6 col-xs-12 mix <%= project.category %>" data-cat="1">
                     <a data-toggle="modal" class="rollit" href="#project_<%= project.id %>" next_index="1">
                         <% project.project_images.each_with_index do |project_image, index| %>
-                          <img class="img-responsive" src="<%= project_image.image.url %>" alt="" height="255px" width="214px" style="display: <%= index.zero? ? 'block': 'none'%>">
+                          <img class="img-responsive1" src="<%= project_image.image.url %>" alt="" height="160px" width="214px" style="display: <%= index.zero? ? 'block': 'none'%>">
                         <% end %>
                         <span class="sorting-cover">
                             <span><%= project.title %></span>
@@ -74,7 +74,7 @@
                         </div>
                         <div class="modal-body">
                           <% if project.project_images.present? %>
-                            <img class="img-responsive" src="<%= project.project_images.first.image.url %>" alt="">
+                            <img class="img-responsive1" src="<%= project.project_images.first.image.url %>" alt="">
                           <% end %>
                           <%= project.description.html_safe %>
                         </div>
